@@ -1,0 +1,79 @@
+:root {
+  /* text */
+  --dt-ativo: hsl(238, 29%, 16%);
+  --dt-hover: hsl(14, 88%, 65%);
+  --dt: hsl(237, 12%, 33%);
+  --dd: hsl(240, 6%, 50%);
+  --dividers: hsl(240, 5%, 91%);
+
+  /* Background gradient: */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
+  background-repeat: no-repeat;
+  font-family: 'Kumbh Sans';
+  padding: 20px;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 60px;
+  border-radius: 20px;
+}
+
+.faq h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.faq-lista dt {
+  padding: 15px 0;
+  color: var(--dt);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.faq-lista dt:hover {
+  color: var(--dt-hover);
+}
+
+.faq-lista dt.ativo {
+  color: var(--dt-ativo);
+  font-weight: 700;
+}
+
+.faq-lista dd {
+  display: none;
+  font-size: 14px;
+  color: var(--dd);
+  padding-bottom: 20px;
+}
+
+.faq-lista dd.ativo {
+  display: block;
+}
+
+.divider {
+  display: block;
+  border-bottom: 1px solid var(--dividers);
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 40px 20px;
+  }
+}
